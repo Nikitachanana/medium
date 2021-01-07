@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "devinstall": "npm install && npm install --prefix client",
-    "start": "npm run build && cross-env NODE_ENV=production npm run server",
+    "start": "cross-env NODE_ENV=production npm run server",
     "server": "nodemon app.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
