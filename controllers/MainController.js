@@ -12,10 +12,10 @@ const scrapeData = async (req,res)=>{
     console.log(findData)
    if(findData){
     //    for(i of ){
-       
+       console.log(typeof(findData.dataValues.relatedTags.split(",")))
        res.json({
            data:JSON.parse(findData.dataValues.allPosts),
-           relatedTags:findData.dataValues.relatedTags
+           relatedTags:findData.dataValues.relatedTags.split(",")
        })
    }
    else{

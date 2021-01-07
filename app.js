@@ -3,7 +3,7 @@ const app = express()
 const mainRoutes = require("./routes/MainRouter")
 const path = require("path")
 require('dotenv').config()
-const port = process.env.PORT || 5656
+const port = 5000
 const db = require("./config/database")
 app.use(express.json());
 app.use("/api", mainRoutes)
